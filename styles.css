@@ -1,0 +1,46 @@
+.accordion > div > span {
+	background-color: #fdeaea;
+	display: block;
+	width: 100;
+	cursor: pointer;
+	padding: 15px;
+	border-bottom: 1px solid #ff9f9f;
+}
+.accordion > div:first-child > span {
+	border-radius: 10px 10px 0 0;
+}
+.accordion > div:last-child > span {
+	border-radius: 0 0 10px 10px;
+	border-bottom: 0;
+}
+.accordion > div.show:last-child > span {
+	border-radius: 0;
+}
+.accordion > div.show:last-child > div {
+	border-bottom: 1px solid #fdeaea;
+	border-radius: 0 0 10px 10px;
+}
+
+.accordion > div > span:after {
+	content: "\002B";
+	float: right;
+}
+.accordion > div.show > span:after {
+	content: "\2212";
+}
+.accordion > div > span:hover ,
+.accordion > div.show > span {
+	background-color: #ff9f9f;
+}
+.accordion > div > div {
+	padding : 0 15px;
+	border-left: 1px solid #fdeaea;
+	border-right: 1px solid #fdeaea;
+	overflow: hidden;
+	transition: all 0.3s;
+	max-height: 0;
+}
+.accordion > div.show > div {
+	max-height: 300px;
+	padding: 15px;
+}
